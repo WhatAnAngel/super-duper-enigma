@@ -1,0 +1,938 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(35, 35, 35); 
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:link{
+    color:rgb(100, 100, 100);
+}
+
+a:visited{
+    color:rgb(100, 100, 100);
+    font-weight: normal;
+}
+
+ul{
+    list-style: none;
+}
+
+/*************************************************************************** HEADER ************************************************************************** */
+
+.header-section {
+    max-width: 100%; /* Establece el ancho máximo al tamaño del contenedor */
+    margin: 0 auto; /* Centrará el bloque en horizontal */
+}
+
+/* Estilos para el contenedor superior (whatsapp, envíos...) */
+
+    header .top-container {
+        background-color: rgb(35, 35, 35);
+        max-width: 100%;
+        height: auto;
+        min-height: 1vw;
+        display: flex;
+    }
+    header .top-container .left-text, .right-text {
+        padding: 0.8vw; 
+        margin: 0 auto;
+        font-size: 0.9vw;
+        color: rgb(245, 245, 245); 
+    }
+
+/* Estilos para el logo */
+
+    header .logo-container {
+        max-width: 100%;
+        text-align: center;
+        margin: 3rem auto 0.8rem auto;
+    }
+    header .logo-container img {
+        width: 18.5rem; 
+    }
+
+/* Estilos para la barra de navegación, o sea el container */
+
+    header .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 1vw 6vw;
+    }
+
+    /* Estilos para AMBAS listas (ítems e iconos) */
+
+    header .navbar ul {
+        list-style: none;
+        display: flex;
+        max-width: 100%;
+        padding: 0.5vw;
+        margin: 0;
+    }
+
+
+    /* PAGINA PRODUCTO */
+
+    header .ruta ul{
+        background-color: rgb(245, 245, 245);
+        list-style: none;
+        display: flex;
+        max-width: 100%;
+        height: auto;
+        align-items: center;
+        padding-left: 5vw;
+    }
+
+    header .ruta ul li{
+        padding: 0.2rem 1.4rem;
+    }
+
+    header .ruta i{
+        height: 0.2vw;
+    }
+
+    header .ruta .caption-title{
+        color: rgb(35, 35, 35);
+        font-size: 0.75rem;  
+    }
+    
+    header .ruta .caption-category{
+        font-weight: bold;
+        color: rgba(150, 150, 150, 0.63);
+        font-size: 0.75vw;
+        text-transform: uppercase;
+    }
+
+    /* PAGINA PRODUCTO */
+
+
+    /* Estilos para los ítems de navegación */
+
+    header .navbar .items li {
+        padding: 1.1rem;
+        white-space: nowrap;
+    }
+        /* Estilos para los enlaces */
+
+        header .navbar li a {
+            color: rgb(35, 35, 35);
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        .navbar a:hover{
+            color: rgb(119, 119, 119);
+        }
+
+    /* Menú desplegable */
+
+    header .navbar .menu-container {
+        display: none; 
+        background-color: white;
+        text-transform: uppercase;
+        position: absolute;
+        width: 24vw;
+        height: 40vh;
+        margin-left: -2vw;
+        z-index: 3;
+    }
+
+    header .navbar .menu-container .grid-text{
+        padding: 0.5rem;
+        white-space: nowrap;
+        margin-left: 1rem;
+    }
+
+    header .navbar .menu-container .grid-title{
+        font-size: 0.8rem;
+        font-weight: bold;
+        margin: 1.5rem auto -1.5rem auto;
+    }
+
+    header .navbar .menu-container hr{
+        width: 15px;
+        color: rgb(100, 100, 100);
+        margin-inline-start: 0;
+        margin-block-end: -1rem;
+    }
+
+    header .navbar .menu-container .grid-text a{
+        color: rgb(100, 100, 100);
+        font-weight: normal;
+        font-size: 0.75rem;
+    }
+
+    header .navbar .menu-container .grid-text a:hover{
+        color: rgb(35, 35, 35);
+        padding-left: 0.5vw;
+        transition: 0.3s all ease-in-out;
+    }
+
+    header .navbar .menu-desplegable:hover .menu-container{
+        display:flex;
+        flex-direction: column;
+        border: 1px solid white;
+        border-radius: 7px;
+        box-shadow: 4px 5px 5px rgba(24, 24, 24, 0.178);
+    }
+
+    /* Estilos iconos */
+
+    header .navbar .icons li i{
+        padding: 0.6vw;
+        color: rgb(35, 35, 35);
+    }
+
+    header .navbar .icons{
+        margin: 0 1vw;
+    }
+
+   header .navbar .icons li i:hover{
+        color: rgb(119, 119, 119);
+    }
+
+    /* Estilos para el menú (las tres rayitas que no están) */
+
+    .menu-icon {
+        display: none;
+    }
+/*
+
+/* Estilos para la imagen de la modelo */
+
+    .models-container {
+        height: 100%;
+        margin: 0 auto 5rem auto;
+}
+    .models-container img {
+        max-width: 100%;
+        /* Asegura que la imagen no supere el ancho del contenedor */
+        height: auto; 
+}
+
+
+/*************************************************************************** GRIDS ****************************************************************************/
+
+.grid-header {
+    text-align: center;
+    height: auto;
+}
+.grid-title {
+    color: rgb(35, 35, 35);
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+.grid-subtitle, .grid-text {
+    color: rgb(100, 100, 100);
+}
+
+/*************************************************************************** MAIN ****************************************************************************/
+
+main .grid-title {
+    font-size: 1.2rem;
+    margin: 4rem auto 1rem;
+}
+main .grid-subtitle, main .grid-text{
+    font-size: 0.9rem;
+}
+  
+/* Estilos para los grids de imágenes */
+main .image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+  gap: 1rem 2rem; /* Espacio entre imágenes */
+  margin: 3rem 5rem 6rem 5rem; /* arriba/abajo, lados */
+}
+
+/* PAGINA CONTACTO */
+
+main .formulario-container{
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width: fit-content;
+    padding: 1rem;
+    margin: 2rem auto 10rem auto;
+    box-shadow: 4px 5px 5px rgba(75, 75, 75, 0.1);
+    border: 1px solid rgb(225, 225, 225);
+}
+
+main .formulario-container .grid-title {
+    margin: 1rem;
+    text-align: left;
+}
+
+main .formulario-container form{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+main .formulario-container label{
+    width: 50%;
+    text-align: right;
+    padding-top: 0.6rem;
+    color: rgb(80, 80, 80);
+    font-size: 0.85rem;
+    font-weight: bolder;
+}
+
+main .formulario-container input, .formulario-container select, main .formulario-container textarea{
+    margin:0rem 4rem 1rem -40%;
+    padding: 0.6rem 1rem;
+    border: 1px solid rgb(225, 225, 225);
+    color: rgb(136, 136, 136);
+    border-radius: 4px;
+}
+::placeholder{
+    color: rgb(180, 180, 180);
+    font-size: 0.8rem;
+}
+
+.formulario-container select{
+    background-color: rgb(250, 250, 250);
+}
+
+.formulario-container button{
+    padding: 0.7rem 1.2rem;
+    width: fit-content;
+    position: relative;
+    left: 60%;
+    border: 1px solid rgb(30, 30, 30);
+    border-radius: 5px;
+    background-color: rgb(30, 30, 30);
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    font-size: 0.7rem;
+}
+
+.formulario-container button:hover{
+    background-color: rgb(80, 80, 80);
+    transition: 0.5s ease;
+}
+
+.formulario-container textarea{
+    width: 120%;
+    height: 10rem;
+    resize: vertical;
+}
+
+/* PAGINA CONTACTO */
+
+
+/* PAGINA PRODUCTO */
+
+#right-part{
+    margin: 2vh 4vw;
+}
+
+#right-part header .product-title:first-child{
+    margin-top: 0;
+}
+#right-part header .product-title{
+    margin-bottom: 0;
+    color: rgb(35, 35, 35);
+}
+
+#right-part header p{
+    margin-top: 0;
+    color: rgb(100, 100, 100);
+    font-size: 0.8rem;
+    margin: 0.5rem auto 1rem auto;
+}
+
+#right-part .add-shopping-cart{
+    display: inline-block;
+    border: 1px dashed rgb(221, 221, 221);
+    border-radius: 5px;
+    width: 100%;
+    height: auto;
+}
+
+#right-part .shopping-cart-general .icon-quantity{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 1px solid rgb(221, 221, 221);
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+#right-part .shopping-cart-general .quantity{
+    padding: 0.9vw;
+    background-color: rgb(245, 245, 245);
+}
+
+#right-part .shopping-cart-general .icon-quantity .quantity:nth-child(2){
+    border: 1px solid rgb(221, 221, 221);
+    margin: -1px 0;
+    background-color: white;
+}
+
+#right-part .shopping-cart-general{
+    padding: 0;
+}
+
+
+#right-part .add-shopping-cart button{
+    margin: 4vh 0;
+    padding: 1.8vh 6vw;
+    border-style: none;
+    background-color: rgb(230 0 35);
+    border-radius: 5px;
+    color:white;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+
+#right-part .add-shopping-cart button:hover{
+    background-color: rgb(165, 24, 43);
+    border-style: none;
+}
+
+#right-part .add-shopping-cart .icons-general i{
+    color: rgb(100, 100, 100);
+    text-align: center;
+}
+
+
+#right-part .add-shopping-cart .icons-general a:hover i{
+    color:rgb(35, 35, 35);
+}
+
+.shopping-cart-general{
+    margin: 0 auto;
+    align-items: center;
+}
+
+#right-part .add-shopping-cart li .add-cart i{
+    padding-right: 0.5vw;
+}
+
+#right-part .shopping-cart-general li{
+    width: auto;
+    margin: 0 1.4vw;
+}
+#right-part .shopping-cart-general li:last-of-type{
+    margin-left: 0;
+}
+
+#right-part .shopping-cart-general .addcart{
+    margin: auto;
+}
+
+#right-part .social{
+    max-width: 100%;
+    font-size: smaller;
+    color:rgb(35, 35, 35);
+}
+
+#right-part .social{
+    text-align: right;
+}
+
+#right-part .social .facebook a, #right-part .social .twitter a, #right-part .social .pinterest a{
+    padding: 0.5vw 1.2vw;
+}
+
+#right-part .social .facebook i{
+    color: rgb(66 103 178);
+    padding-right: 0.8vw;
+}
+
+#right-part .social .facebook a:hover{
+    background-color: rgb(66 103 178);
+    border-radius: 3px;
+}
+
+#right-part .social .twitter i{
+    color: rgb(29 161 242);
+    padding-right: 0.8vw;
+}
+
+#right-part .social .twitter a:hover{
+    background-color: rgb(29 161 242);
+    border-radius: 3px;
+}
+
+#right-part .social .pinterest i{
+    color: rgb(230 0 35);
+    padding-right: 0.8vw;
+}
+#right-part .social .pinterest a:hover{
+    background-color: rgb(230 0 35);
+    border-radius: 3px;
+}
+
+#right-part .social a:hover, #right-part .social a:hover i{
+    color:white;
+}
+
+.tabs-container .description {
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 5px;
+    border-bottom: 1px solid white;
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    max-width: 100%;
+    font-weight: bold;
+    z-index: 3;
+}
+
+.tabs-container ul a:hover, .tabs-container .description a{
+    color: rgb(35, 35, 35);
+    font-weight: bold;
+}
+
+.tabs-container ul li{
+    padding: 1vh 1vw;
+    text-align: center;
+    z-index: 3;
+}
+
+.tabs-container ul{
+    margin-bottom: 0vh;
+    z-index: 3;
+}
+
+.tabs-content{
+    display: block;
+    padding: 2vh 3vw;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 5px;
+    max-width: 100%;
+    height: auto;
+    color: rgb(102, 102, 102);
+    font-size: 1vw;
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.pago-y-envios .pago-seguro, .pago-y-envios .envio{
+    display: block;
+    border: 1px solid rgb(221, 221, 221);
+    border-top: 5px solid rgb(237, 237, 237);
+    max-width: 100%;
+    color: rgb(102, 102, 102);
+    font-size: 1vw;
+}
+
+.pago-y-envios .grid-title, .pago-y-envios .grid-text{
+    margin: 0 auto;
+    padding: auto;
+    font-size: 1vw;
+}
+
+.pago-y-envios .grid-title{
+    text-transform:initial;
+    padding: 2vh 0 0.5vh 0;
+}
+
+.pago-y-envios i{
+    color: rgb(199, 143, 0);
+    width: 2vw;
+    height: 2vh;
+}
+
+.pago-y-envios .grid-text{
+    padding: 0.5vh 0 2vh 2.3vw;
+}
+
+#left-part{
+    width: 90%;
+}
+
+.product-image img {
+    width: 80%; 
+    height: 100%; 
+    object-fit: cover; 
+    overflow: hidden;
+    margin: 2vh auto 2vh 8vw;
+}
+
+ .product-image .normal{
+    display: block;
+    position: relative;
+    z-index: 2;
+}
+
+ .product-image .hover{
+    display: none;
+    position: relative;
+    object-fit: cover; 
+    z-index: 1;
+}
+
+ .product-image a:hover .normal{
+    display: none;
+}
+
+ .product-image a:hover .hover{
+    display: block;
+}
+
+.add-shopping-cart ul .tabs-content ul, .tabs-name ul, .social ul, .add-shopping-cart ul, .tabs-container ul{
+    display: inline-flex;
+}
+
+.product-page-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0; 
+    margin: 3rem 0; 
+    width: 100%
+}
+
+.product-page-grid .image{
+    width: 100%; 
+    padding: 1px;
+}
+
+.product-page-grid .image:hover{
+    background-color: rgb(102, 102, 102);
+}
+
+.product-page-grid .image-grid{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 85%; 
+    margin: 0 auto 0 7vw;
+}
+
+#bottom-product-page .image-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem 2rem; 
+    margin: 3rem 5rem 6rem 5rem; 
+}
+
+#bottom-product-page .image img{
+    width: 100%; 
+    height: 85%;
+}
+
+#bottom-product-page .text{
+    background-color: white;
+    height: 5%;
+    max-width: 100%;
+    margin: 2vh auto 15vh auto;
+}
+
+#bottom-product-page .caption-title{
+    color: rgb(35, 35, 35);
+    font-size: 1rem;
+    margin: 0.7vh 0.1vw;     
+}
+
+#bottom-product-page .text a:hover{
+    font-weight: bold;
+}
+
+#bottom-product-page .caption-category{
+    font-weight: bold;
+    color: rgba(150, 150, 150, 0.63);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
+
+
+/* PAGINA PRODUCTO */
+
+
+
+/* Estilos para las imágenes en el grid */
+
+main .image img {
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; /* recorta la imagen para que se ajuste al tamaño del contenedor manteniendo la proporción */
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+main .image{
+    width: 100%; 
+    height: 100%; 
+    position: relative;
+    overflow: hidden;
+}
+
+main #categorias .image:hover img {
+    transform: scale(1.2);
+    transition: 0.5s all ease-in-out;
+}
+
+main #categorias .container-categorias{
+    position: relative; /* no hace falta pero bueno */
+}
+
+main #categorias .text{
+    background-color: white;
+    padding: 1.2vw 0;
+    width: 80%;
+    top: 50%; /* Posiciona desde la mitad superior */
+    left: 50%; /* Posiciona desde la mitad izquierda */
+    transform: translate(-50%, -50%); /* Centra el elemento en relación con su contenedor */
+    position: absolute;
+    z-index: 2;
+    border: 1px solid rgb(245, 245, 245);
+    border-radius: 7px;
+}
+
+main #categorias .grid-title{
+    font-size: 2vh;
+    text-align: center;
+    margin: 0 auto 1vw auto;
+}
+
+
+main #categorias .grid-subtitle{
+    font-size: 1.9vh;
+    text-align: center;
+    margin: 0 auto;
+    font-weight: normal;
+}
+
+
+/* Estilos para el grid con captions */
+
+main #influencers .image img, #destacados .image img{
+    width: 100%; 
+    height: 85%;
+}
+
+main .image img.normal {
+    display: block;
+    position: relative;
+}
+
+main .image img.hover {
+    display: none;
+}
+
+/* HOVERS */
+
+main .image a:hover img.normal {
+    display: none;
+} 
+
+main .image a:hover img.hover {
+    display: block;
+}
+
+main #destacados .text, main #influencers .text{
+    background-color: white;
+    max-height: 100%;
+    max-width: 100%;
+    margin-top: 3vh;
+    position: relative;
+}
+
+main #destacados .caption-title, main #influencers .caption-title{
+    color: rgb(35, 35, 35);
+    font-size: 1rem;
+    margin: 0.7vh 0.1vw;     
+}
+
+main #destacados .text a:hover{
+    font-weight: bold;
+}
+
+main #destacados .caption-category{
+    font-weight: bold;
+    color: rgba(150, 150, 150, 0.63);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
+
+main #destacados .caption-price, main #influencers .caption-price {
+    color: rgb(35, 35, 35);
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+main #foto_random .foto-random-container{
+    height: 100%;
+    margin: 0;
+    position: relative; 
+}
+main #foto_random .foto-random-container img{
+    max-width: 100%;
+    margin: 3vh auto;
+    height: 100%; 
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+main #foto_random .foto-random-container .text{
+    background-color: rgba(255, 255, 255, 0.377);
+    padding: 0.6vw 0;
+    width: 40%;
+    top: 50%; /* Posiciona desde la mitad superior */
+    left: 50%; /* Posiciona desde la mitad izquierda */
+    transform: translate(-50%, -50%); /* Centra el elemento en relación con su contenedor */
+    position: absolute;
+    z-index: 2;
+    border: 2px solid;
+    border-color: white;
+}
+main #foto_random .grid-title{
+    font-size: 2vh;
+    text-align: center;
+    margin: 2.8rem auto;
+}
+
+main .instagram{
+    text-align: center;
+    margin: 15vh auto;
+}
+
+
+
+/************************************************************************ FOOTER ****************************************************************************/
+
+.footer-grid{
+    display: grid;
+}
+
+.footer-grid ul{
+    max-width: auto;
+    align-items: center;
+    justify-content:space-around;
+}
+
+.footer-grid .grid-text:hover{
+    padding-left: 0.5vw;
+    transition: 0.3s all ease-in-out;
+}
+
+
+footer .icons i {
+    align-items: center;
+    color: rgb(35, 35, 35);
+    margin: 0 0.8vw;
+}
+
+footer .icons i:hover{
+    transform: rotate(360deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+footer .text-footer{
+    margin: 0 1vw;
+    display: flex;
+    flex-direction: column;
+
+}
+
+footer .grid-title{
+    font-size: 0.8rem;
+    margin-bottom: auto;
+}
+
+footer .grid-text{
+    font-size: 0.9rem;
+}
+
+.benditta-info, #envios .footer-grid, .contact-footer, .bottom-container{
+    background-color: rgba(221, 221, 221, 0.39);
+}
+
+footer .benditta-info {
+    text-align: center;
+    margin: 0 auto 5vh auto;
+    width:40%;
+    max-width: 90%;
+    padding: 4vh 4vw;
+}
+
+
+#envios .footer-grid{
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    gap: 2vw;
+    margin: 0 auto 2vh auto;
+}
+#envios .footer-grid ul{
+    display: flex;
+}
+
+
+
+#info .footer-grid{
+    grid-template-columns: repeat(5 1fr);
+}
+
+.grid-item{
+    grid-column: 4;
+}
+
+.contact-footer{
+    white-space: nowrap;
+    width: fit-content;
+    margin: 6vh auto;
+}
+
+.contact-footer i{
+    margin-right: 1vw;
+    color: rgb(199, 143, 0);
+}
+
+.contact-footer ul{
+    padding: 3.5vh 3.5vw;
+}
+
+.bottom-container {
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.bottom-container span, .bottom-container a{
+    font-weight: bold;
+    color: rgb(35, 35, 35);
+}
+
+.copyright, .pagos {
+    margin: 0 auto;
+}
+
+.pagos img{
+    padding: 1vw; 
+}
+
+.texto-correo input{
+    border: none;
+    width: 100%;
+    padding-left: 1vw;
+}
+
+.texto-correo{
+    display: flex;
+    border: 1px solid rgb(245, 245, 245);
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 80%;
+    justify-content: space-between;
+}
+
+.texto-correo button{
+    padding: 1rem 1.5rem;
+    border: none;
+    background-color: rgb(245, 245, 245);
+    white-space: nowrap;
+}
+
+
+
+
+
+
+
